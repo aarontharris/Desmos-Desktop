@@ -220,7 +220,9 @@ document.addEventListener("keydown", event => {
             if (remote.getCurrentWindow().isFullScreen()) {
                 remote.getCurrentWindow().setFullScreen(false);
             } else {
-                remote.getCurrentWindow().close();
+                // Do not close the app on 'escape' 
+                // That is a nightmare for vi users
+                // remote.getCurrentWindow().close();
             }
             break;
     }
